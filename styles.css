@@ -59,6 +59,34 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  
+  /* Firefox Scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--emerald) var(--cream-dark);
+}
+
+/* ===== CUSTOM SCROLLBAR (Webkit) ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--emerald-light) 0%, var(--emerald) 100%);
+  border-radius: 10px;
+  border: 2px solid var(--cream-dark);
+  transition: var(--transition);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 100%);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--cream-dark);
 }
 
 h1, h2, h3, h4 {
