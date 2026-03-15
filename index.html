@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zakat Al-Fitr — Interactive Learning Journey</title>
+  <meta name="description" content="Learn everything about Zakat Al-Fitr through an interactive, gamified experience. Understand the what, why, when, who, and how of this obligatory charity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== GLOBAL PROGRESS BAR ===== -->
+  <div class="progress-bar-container" id="progressBarContainer">
+    <div class="progress-bar-fill" id="progressBarFill"></div>
+    <span class="progress-label" id="progressLabel">0% Complete</span>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <p class="hero-bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+      <h1 class="hero-title">Zakat Al-Fitr</h1>
+      <p class="hero-subtitle">Learn the rulings of zakat ul fitr interactively</p>
+      <p class="hero-desc">Learn and retain rulings of zakat ul fitr</p>
+      <button class="btn-primary hero-cta" id="startJourney">
+        <span>Start</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <div class="hero-chapters-preview">
+        <span>there are 7 chapters along with interactive games and a final quiz!(All information is scholarly and has been taken from islamqa.info)</span>
+      </div>
+    </div>
+    <div class="scroll-indicator" id="scrollIndicator">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER 1: WHAT IS ZAKAT AL-FITR? ===== -->
+  <section class="chapter" id="chapter1" data-chapter="1">
+    <div class="chapter-header reveal">
+      <span class="chapter-number">Chapter 1</span>
+      <h2 class="chapter-title">What is Zakat Al-Fitr?</h2>
+      <div class="chapter-divider"></div>
+    </div>
+    <div class="chapter-content">
+      <div class="info-card reveal">
+        <div class="info-card-icon">📖</div>
+        <h3>Definition</h3>
+        <p><strong>Zakat al-Fitr</strong> is a kind of charity (<em>sadaqah</em>) that is <strong>obligatory</strong> at the time of breaking the fast of Ramadan.</p>
+        <p>The word <em>zakah</em> is connected to <em>fitr</em> (breaking fast) because the occasion of breaking the fast is the reason why this zakah becomes obligatory.</p>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-card-icon">⚖️</div>
+        <h3>Is it Compulsory?</h3>
+        <p><strong>Yes — it is Fard (obligatory).</strong></p>
+        <blockquote class="hadith-quote">
+          <p>Ibn 'Umar said: "The Messenger of Allah ﷺ <strong>made Zakat al-Fitr obligatory.</strong>"</p>
+          <cite>— Consensus of the scholars (ijmaa') confirms it is fard. (Al-Mughni)</cite>
+        </blockquote>
+      </div>
+      <div class="info-card highlight-card reveal">
+        <div class="info-card-icon">💡</div>
+        <h3>Key Difference from Zakat al-Maal</h3>
+        <p>Unlike Zakat on wealth, Zakat al-Fitr has <strong>no minimum wealth threshold (nisab)</strong> and does not require a full year to pass. It is connected to <strong>people, not money</strong> — you pay per person, not based on wealth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER 2: WISDOM BEHIND IT ===== -->
+  <section class="chapter chapter-alt" id="chapter2" data-chapter="2">
+    <div class="chapter-header reveal">
+      <span class="chapter-number">Chapter 2</span>
+      <h2 class="chapter-title">The Wisdom Behind It</h2>
+      <div class="chapter-divider"></div>
+    </div>
+    <div class="chapter-content">
+      <p class="chapter-intro reveal">Click each card to reveal the wisdom behind Zakat al-Fitr</p>
+      <div class="flip-cards-grid">
+        <!-- Flip Card 1 -->
+        <div class="flip-card reveal" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="flip-icon">🧹</div>
+              <h3>Purification</h3>
+              <p class="flip-hint">Tap to reveal</p>
+            </div>
+            <div class="flip-card-back">
+              <p>Zakat al-Fitr purifies the fasting person from <strong>idle talk and foul language</strong> that may have occurred during Ramadan.</p>
+              <cite>— Hadith of Ibn 'Abbaas (Abu Dawood, 1371)</cite>
+            </div>
+          </div>
+        </div>
+        <!-- Flip Card 2 -->
+        <div class="flip-card reveal" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="flip-icon">🍽️</div>
+              <h3>Feeding the Poor</h3>
+              <p class="flip-hint">Tap to reveal</p>
+            </div>
+            <div class="flip-card-back">
+              <p>It provides <strong>food for the needy</strong> so they don't have to ask on the day of Eid — ensuring joy for the entire community.</p>
+              <cite>— Hadith of Ibn 'Abbaas (Abu Dawood)</cite>
+            </div>
+          </div>
+        </div>
+        <!-- Flip Card 3 -->
+        <div class="flip-card reveal" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="flip-icon">🕌</div>
+              <h3>Completing the Fast</h3>
+              <p class="flip-hint">Tap to reveal</p>
+            </div>
+            <div class="flip-card-back">
+              <p>"Zakat al-Fitr for Ramadan is like the <strong>two prostrations of sahw</strong> (forgetfulness) for prayer — it makes up for any shortcomings in the fast."</p>
+              <cite>— Wakee' ibn al-Jarraah (Al-Nawawi, al-Majmoo')</cite>
+            </div>
+          </div>
+        </div>
+        <!-- Flip Card 4 -->
+        <div class="flip-card reveal" tabindex="0">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="flip-icon">✨</div>
+              <h3>Qur'anic Link</h3>
+              <p class="flip-hint">Tap to reveal</p>
+            </div>
+            <div class="flip-card-back">
+              <p>"But those will prosper who <strong>purify themselves</strong>, and glorify the name of their Guardian-Lord, and lift their hearts in Prayer."</p>
+              <cite>— Surah al-A'laa [87:14-15]</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER 3: WHO MUST PAY? ===== -->
+  <section class="chapter" id="chapter3" data-chapter="3">
+    <div class="chapter-header reveal">
+      <span class="chapter-number">Chapter 3</span>
+      <h2 class="chapter-title">Who Must Pay?</h2>
+      <div class="chapter-divider"></div>
+    </div>
+    <div class="chapter-content">
+      <p class="chapter-intro reveal">Answer the questions below to find out who is obligated to pay Zakat al-Fitr:</p>
+
+      <!-- Decision Tree -->
+      <div class="decision-tree reveal" id="decisionTree">
+        <div class="dt-question active" data-step="1">
+          <div class="dt-icon">❓</div>
+          <h3>Are you a Muslim?</h3>
+          <p>Zakat al-Fitr is only obligatory upon Muslims.</p>
+          <div class="dt-buttons">
+            <button class="dt-btn dt-yes" data-next="2" data-answer="yes">Yes, I am</button>
+            <button class="dt-btn dt-no" data-next="end-no1" data-answer="no">No</button>
+          </div>
+        </div>
+        <div class="dt-question" data-step="2">
+          <div class="dt-icon">❓</div>
+          <h3>Do you have enough food for yourself and your dependents for the day & night of Eid, PLUS extra?</h3>
+          <p>The obligation depends on whether you can afford it.</p>
+          <div class="dt-buttons">
+            <button class="dt-btn dt-yes" data-next="3" data-answer="yes">Yes, I have extra</button>
+            <button class="dt-btn dt-no" data-next="end-no2" data-answer="no">No, I only have enough for us</button>
+          </div>
+        </div>
+        <div class="dt-question" data-step="3">
+          <div class="dt-icon">❓</div>
+          <h3>Do you have dependents (wife, children, parents)?</h3>
+          <p>You pay on behalf of yourself AND those you are obliged to support.</p>
+          <div class="dt-buttons">
+            <button class="dt-btn dt-yes" data-next="end-yes-deps" data-answer="yes">Yes</button>
+            <button class="dt-btn dt-no" data-next="end-yes-nodeps" data-answer="no">No, just myself</button>
+          </div>
+        </div>
+        <!-- Results -->
+        <div class="dt-result" data-step="end-no1">
+          <div class="dt-result-icon">ℹ️</div>
+          <h3>Not Required</h3>
+          <p>Zakat al-Fitr is obligatory only on <strong>Muslims</strong>. Purification through zakah is specific to believers.</p>
+          <button class="dt-restart" id="dtRestart1">Try Again</button>
+        </div>
+        <div class="dt-result" data-step="end-no2">
+          <div class="dt-result-icon">💚</div>
+          <h3>Not Required — You're Exempt</h3>
+          <p>The one who is in financial difficulty is <strong>not obliged to give</strong> Zakat al-Fitr. If you only have enough for yourself and your dependents, you are exempt. May Allah make things easy for you.</p>
+          <button class="dt-restart" id="dtRestart2">Try Again</button>
+        </div>
+        <div class="dt-result" data-step="end-yes-deps">
+          <div class="dt-result-icon">✅</div>
+          <h3>Yes — You Must Pay!</h3>
+          <p>You must give Zakat al-Fitr on behalf of <strong>yourself</strong> and all your <strong>dependents</strong> (wife, children, parents if poor). Start with the closest relatives first: yourself → wife → children → parents → others.</p>
+          <button class="dt-restart" id="dtRestart3">Try Again</button>
+        </div>
+        <div class="dt-result" data-step="end-yes-nodeps">
+          <div class="dt-result-icon">✅</div>
+          <h3>Yes — You Must Pay!</h3>
+          <p>You must give Zakat al-Fitr <strong>on your own behalf</strong>. One saa' of the staple food of your area.</p>
+          <button class="dt-restart" id="dtRestart4">Try Again</button>
+        </div>
+      </div>
+
+      <!-- Additional rules -->
+      <div class="rules-accordion reveal">
+        <h3 class="rules-title">📜 Additional Rules — Click to Expand</h3>
+        <details class="rule-item">
+          <summary>What about a newborn or new spouse?</summary>
+          <p>If a child is born, or you get married, or someone becomes Muslim <strong>before sunset on the last day of Ramadan</strong>, you must give on their behalf. If it happens after sunset, you don't have to.</p>
+        </details>
+        <details class="rule-item">
+          <summary>What about a foetus?</summary>
+          <p>It is <strong>not obligatory</strong> to give on behalf of an unborn child, but if you do so voluntarily, there is nothing wrong with it.</p>
+        </details>
+        <details class="rule-item">
+          <summary>What about someone who passed away?</summary>
+          <p>If someone dies <strong>after sunset</strong> on the last night of Shawwaal (night of Eid), Zakat al-Fitr must still be given on their behalf from their estate.</p>
+        </details>
+        <details class="rule-item">
+          <summary>What about hired workers/servants?</summary>
+          <p>The employer does <strong>not</strong> have to give on behalf of a hired worker, because they are not a dependent.</p>
+        </details>
+        <details class="rule-item">
+          <summary>What about orphans?</summary>
+          <p>The guardian should give Zakat al-Fitr on behalf of orphans whose wealth is under their control, even if they are minors.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER 4: WHEN TO PAY? ===== -->
+  <section class="chapter chapter-alt" id="chapter4" data-chapter="4">
+    <div class="chapter-header reveal">
+      <span class="chapter-number">Chapter 4</span>
+      <h2 class="chapter-title">When to Pay?</h2>
+      <div class="chapter-divider"></div>
+    </div>
+    <div class="chapter-content">
+      <p class="chapter-intro reveal">Click each point on the timeline to learn about the key moments:</p>
+      <div class="timeline reveal" id="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item" data-tl="1">
+          <div class="timeline-dot permissible"></div>
+          <div class="timeline-card">
+            <span class="timeline-badge badge-permissible">Permissible</span>
+            <h3>1-2 Days Before Eid</h3>
+            <div class="timeline-detail">
+              <p>It is <strong>permissible</strong> to give Zakat al-Fitr one or two days before Eid.</p>
+              <blockquote>"Ibn 'Umar used to give it a day or two before Eid al-Fitr."<cite>— Saheeh al-Bukhaari</cite></blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tl="2">
+          <div class="timeline-dot obligatory"></div>
+          <div class="timeline-card">
+            <span class="timeline-badge badge-obligatory">Becomes Obligatory</span>
+            <h3>Sunset — Last Day of Ramadan</h3>
+            <div class="timeline-detail">
+              <p>Zakat al-Fitr <strong>becomes obligatory</strong> when the sun sets on the last day of Ramadan (night of Eid).</p>
+              <p>Anyone who gets married, has a child, or becomes Muslim <strong>before</strong> this sunset must give it.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tl="3">
+          <div class="timeline-dot best"></div>
+          <div class="timeline-card">
+            <span class="timeline-badge badge-best">Best Time ⭐</span>
+            <h3>Morning of Eid — Before the Prayer</h3>
+            <div class="timeline-detail">
+              <p>The <strong>most preferable</strong> time is on the morning of Eid, before Salaat al-Eid.</p>
+              <blockquote>"The Prophet ﷺ commanded that it should be given before the people went out to pray."<cite>— Al-Bukhaari, 1407</cite></blockquote>
+              <p>This is why it is Sunnah to <strong>delay Eid al-Fitr prayer</strong> — to give people time to pay.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tl="4">
+          <div class="timeline-dot disliked"></div>
+          <div class="timeline-card">
+            <span class="timeline-badge badge-disliked">After Eid Prayer ⚠️</span>
+            <h3>After Salaat al-Eid</h3>
+            <div class="timeline-detail">
+              <p>Delaying it until after the Eid prayer is <strong>makrooh (disliked)</strong>, and some scholars say it is <strong>haraam</strong>.</p>
+              <blockquote>"Whoever pays it before the prayer, it is an accepted zakah; whoever pays it after the prayer, it is just a kind of charity."<cite>— Abu Dawood, 1371</cite></blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-tl="5">
+          <div class="timeline-dot haram"></div>
+          <div class="timeline-card">
+            <span class="timeline-badge badge-haram">After Eid Day 🚫</span>
+            <h3>Delayed Past Eid Day</h3>
+            <div class="timeline-detail">
+              <p>Delaying it past the day of Eid without a valid excuse is <strong>haraam by consensus</strong>. It must still be made up (qadaa').</p>
+              <p>"This defeats the purpose — saving the poor from having to ask on the day of joy."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER 5: HOW MUCH TO GIVE? ===== -->
+  <section class="chapter" id="chapter5" data-chapter="5">
+    <div class="chapter-header reveal">
+      <span class="chapter-number">Chapter 5</span>
+      <h2 class="chapter-title">How Much to Give?</h2>
+      <div class="chapter-divider"></div>
+    </div>
+    <div class="chapter-content">
+      <div class="info-card reveal">
+        <div class="info-card-icon">⚖️</div>
+        <h3>The Measure: One Saa'</h3>
+        <p>The amount is <strong>one saa'</strong> of food per person, according to the saa' used during the time of the Prophet ﷺ.</p>
+        <blockquote class="hadith-quote">
+          <p>"At the time of the Prophet ﷺ we used to give it in the form of a saa' of food…"</p>
+          <cite>— Abu Sa'eed al-Khudri (Al-Bukhaari, 1412)</cite>
+        </blockquote>
+        <p>A <strong>saa'</strong> is a measure of volume. Its weight varies by food type. For rice, it is approximately <strong>3 kg</strong>.</p>
+      </div>
+
+      <!-- Calculator -->
+      <div class="calculator-section reveal" id="calculator">
+        <h3>🧮 Zakat Al-Fitr Calculator</h3>
+        <p class="calc-desc">Select a food type and enter the number of people to calculate your total:</p>
+        <div class="calc-controls">
+          <div class="calc-field">
+            <label for="foodType">Food Type</label>
+            <div class="food-selector" id="foodSelector">
+              <button class="food-btn active" data-food="rice" data-weight="3.0">🍚 Rice<span>~3.0 kg</span></button>
+              <button class="food-btn" data-food="wheat" data-weight="2.5">🌾 Wheat<span>~2.5 kg</span></button>
+              <button class="food-btn" data-food="dates" data-weight="2.7">🌴 Dates<span>~2.7 kg</span></button>
+              <button class="food-btn" data-food="barley" data-weight="2.2">🌿 Barley<span>~2.2 kg</span></button>
+              <button class="food-btn" data-food="raisins" data-weight="2.8">🍇 Raisins<span>~2.8 kg</span></button>
+              <button class="food-btn" data-food="lentils" data-weight="2.9">🫘 Lentils<span>~2.9 kg</span></button>
+            </div>
+          </div>
+          <div class="calc-field">
+            <label for="numPeople">Number of People</label>
+            <div class="people-counter">
+              <button class="counter-btn" id="decreasePeople">−</button>
+              <span class="counter-value" id="peopleCount">1</span>
+              <button class="counter-btn" id="increasePeople">+</button>
+            </div>
+            <p class="calc-hint">Include yourself + all dependents</p>
+          </div>
+        </div>
+        <div class="calc-result" id="calcResult">
+          <div class="calc-result-inner">
+            <span class="calc-result-label">Total Zakat Al-Fitr Due:</span>
+            <span class="calc-result-value" id="calcTotal">3.0 kg of Rice</span>
+            <span class="calc-result-sub" id="calcBreakdown">1 person × 3.0 kg per saa'</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER 6: WHAT CAN BE GIVEN? ===== -->
+  <section class="chapter chapter-alt" id="chapter6" data-chapter="6">
+    <div class="chapter-header reveal">
+      <span class="chapter-number">Chapter 6</span>
+      <h2 class="chapter-title">What Can Be Given?</h2>
+      <div class="chapter-divider"></div>
+    </div>
+    <div class="chapter-content">
+      <p class="chapter-intro reveal">Drag each food item to the correct category — is it <strong>valid</strong> or <strong>invalid</strong> for Zakat al-Fitr?</p>
+
+      <!-- Drag and Drop Game -->
+      <div class="dnd-game reveal" id="dndGame">
+        <div class="dnd-items" id="dndItems">
+          <div class="dnd-item" draggable="true" data-valid="true" data-name="Rice">🍚 Rice</div>
+          <div class="dnd-item" draggable="true" data-valid="true" data-name="Dates">🌴 Dates</div>
+          <div class="dnd-item" draggable="true" data-valid="false" data-name="Cash">💵 Cash</div>
+          <div class="dnd-item" draggable="true" data-valid="true" data-name="Wheat">🌾 Wheat</div>
+          <div class="dnd-item" draggable="true" data-valid="false" data-name="Meat">🥩 Meat</div>
+          <div class="dnd-item" draggable="true" data-valid="true" data-name="Barley">🌿 Barley</div>
+          <div class="dnd-item" draggable="true" data-valid="false" data-name="Fish">🐟 Fish</div>
+          <div class="dnd-item" draggable="true" data-valid="true" data-name="Raisins">🍇 Raisins</div>
+          <div class="dnd-item" draggable="true" data-valid="true" data-name="Lentils">🫘 Lentils</div>
+          <div class="dnd-item" draggable="true" data-valid="false" data-name="Clothing">👕 Clothing</div>
+          <div class="dnd-item" draggable="true" data-valid="true" data-name="Pasta">🍝 Pasta</div>
+          <div class="dnd-item" draggable="true" data-valid="false" data-name="Eggs">🥚 Eggs</div>
+        </div>
+        <div class="dnd-zones">
+          <div class="dnd-zone valid-zone" id="validZone">
+            <div class="zone-header">
+              <span class="zone-icon">✅</span>
+              <h3>Valid</h3>
+            </div>
+            <div class="zone-items"></div>
+          </div>
+          <div class="dnd-zone invalid-zone" id="invalidZone">
+            <div class="zone-header">
+              <span class="zone-icon">❌</span>
+              <h3>Not Valid</h3>
+            </div>
+            <div class="zone-items"></div>
+          </div>
+        </div>
+        <div class="dnd-score" id="dndScore">
+          <span id="dndScoreText">Sort all items to see your score!</span>
+        </div>
+        <button class="btn-secondary" id="dndReset" style="display:none;">Play Again</button>
+      </div>
+
+      <!-- Explanatory note -->
+      <div class="info-card reveal" style="margin-top: 2rem;">
+        <div class="info-card-icon">📝</div>
+        <h3>The Rule</h3>
+        <p>Zakat al-Fitr must be given as <strong>staple food</strong> — grains, dates, and similar items eaten by people. Cash, meat, fish, eggs, fruits (like figs) and clothing are <strong>not valid</strong>.</p>
+        <p>It should be given in the form of the <strong>local staple food</strong> of your area — whether that is rice, wheat, dates, corn, pearl millet, or similar grains.</p>
+        <p><strong>Pasta</strong> made from wheat is permissible, but the weight must equal one saa' of wheat.</p>
+      </div>
+
+      <!-- Cash Debate -->
+      <div class="debate-section reveal" id="cashDebate">
+        <h3>💰 Why Not Cash?</h3>
+        <div class="debate-cards">
+          <div class="debate-card against">
+            <h4>The Ruling</h4>
+            <ul>
+              <li>The Prophet ﷺ specified <strong>food</strong>, not money</li>
+              <li>The Sahaabah gave it as <strong>food</strong></li>
+              <li>It is regulated by the measure of a <strong>saa'</strong> (volume of food)</li>
+              <li>Islam intends it to be given <strong>openly</strong></li>
+              <li>Food benefits the poor <strong>directly</strong> — especially during inflation or hoarding</li>
+            </ul>
+          </div>
+          <div class="debate-card response">
+            <h4>Common Question Answered</h4>
+            <p><em>"But isn't money more useful for the poor?"</em></p>
+            <p>Other needs of the poor (shelter, clothing, tuition) are covered by <strong>Zakat al-Maal</strong> and general charity. Zakat al-Fitr has a <strong>specific purpose</strong>: food for the day of Eid.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHAPTER 7: WHO RECEIVES & DISTRIBUTION ===== -->
+  <section class="chapter" id="chapter7" data-chapter="7">
+    <div class="chapter-header reveal">
+      <span class="chapter-number">Chapter 7</span>
+      <h2 class="chapter-title">Who Receives It & How to Distribute</h2>
+      <div class="chapter-divider"></div>
+    </div>
+    <div class="chapter-content">
+      <div class="recipients-grid reveal">
+        <div class="recipient-card">
+          <div class="recipient-icon">🤲</div>
+          <h3>The Poor & Needy</h3>
+          <p>Those who don't have enough for their basic needs</p>
+        </div>
+        <div class="recipient-card">
+          <div class="recipient-icon">⛓️</div>
+          <h3>Freeing Slaves</h3>
+          <p>Those who have contracted to buy their freedom</p>
+        </div>
+        <div class="recipient-card">
+          <div class="recipient-icon">💳</div>
+          <h3>Debtors</h3>
+          <p>Those burdened with overwhelming debt</p>
+        </div>
+        <div class="recipient-card">
+          <div class="recipient-icon">⚔️</div>
+          <h3>In the Way of Allah</h3>
+          <p>Those striving in the cause of Allah</p>
+        </div>
+        <div class="recipient-card">
+          <div class="recipient-icon">🧳</div>
+          <h3>Wayfarers</h3>
+          <p>Travelers who are stranded and in need</p>
+        </div>
+        <div class="recipient-card">
+          <div class="recipient-icon">📋</div>
+          <h3>Collectors</h3>
+          <p>Those appointed to collect and distribute</p>
+        </div>
+      </div>
+
+      <div class="info-card reveal" style="margin-top:2rem;">
+        <div class="info-card-icon">🌍</div>
+        <h3>Where to Give?</h3>
+        <p>Zakat al-Fitr should be given <strong>where you are</strong> on the night of Eid — not necessarily where your wealth is. However, it is permissible to transfer it to your <strong>homeland</strong> if the people there are in greater need, especially to poor relatives.</p>
+      </div>
+
+      <div class="distribution-tips reveal">
+        <h3>📦 Distribution Tips</h3>
+        <div class="tip-grid">
+          <div class="tip-item">
+            <span class="tip-icon">👤</span>
+            <p><strong>Self-distribution is preferred</strong> — share it out yourself rather than through a collector</p>
+          </div>
+          <div class="tip-item">
+            <span class="tip-icon">🤝</span>
+            <p>You may appoint a <strong>trustworthy</strong> person to distribute on your behalf</p>
+          </div>
+          <div class="tip-item">
+            <span class="tip-icon">➗</span>
+            <p>One saa' may be <strong>split among multiple</strong> poor people, or many saa's may be given to <strong>one person</strong></p>
+          </div>
+          <div class="tip-item">
+            <span class="tip-icon">🚫</span>
+            <p>It is <strong>not permissible</strong> to give to a non-Muslim, or to buy it back from the recipient</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GRAND QUIZ ===== -->
+  <section class="chapter quiz-section" id="quizSection" data-chapter="quiz">
+    <div class="chapter-header reveal">
+      <span class="chapter-number">Final Challenge</span>
+      <h2 class="chapter-title">Test Your Knowledge 🏆</h2>
+      <div class="chapter-divider"></div>
+    </div>
+    <div class="chapter-content">
+      <div class="quiz-container reveal" id="quizContainer">
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="quizProgressFill"></div>
+          </div>
+          <span class="quiz-progress-text" id="quizProgressText">Question 1 of 10</span>
+        </div>
+        <div class="quiz-question" id="quizQuestion">
+          <h3 id="questionText"></h3>
+          <div class="quiz-options" id="quizOptions"></div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+          <button class="btn-primary quiz-next" id="quizNext" style="display:none;">Next Question →</button>
+        </div>
+      </div>
+
+      <!-- Quiz Result -->
+      <div class="quiz-result" id="quizResult" style="display:none;">
+        <div class="certificate" id="certificate">
+          <div class="cert-pattern"></div>
+          <div class="cert-content">
+            <h2>🎓 Journey Complete!</h2>
+            <div class="cert-score">
+              <span class="cert-score-num" id="certScore">0</span>
+              <span class="cert-score-den">/ 10</span>
+            </div>
+            <p class="cert-message" id="certMessage"></p>
+            <div class="cert-badge" id="certBadge"></div>
+            <button class="btn-primary" id="retakeQuiz">Retake Quiz</button>
+            <button class="btn-secondary" id="backToTop">Back to Top ↑</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-prayer">رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنتَ السَّمِيعُ الْعَلِيمُ</p>
+      <p class="footer-translation">"Our Lord, accept from us. Indeed, You are the All-Hearing, the All-Knowing."</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
